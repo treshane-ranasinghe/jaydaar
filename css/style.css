@@ -813,16 +813,25 @@ body:has(.mmenu.is-open) .nav__glass { color: var(--ivory); }
   .promo h3 { font-size: 34px; }
   .promo p { font-size: 13px; }
   .promo .btn { padding: 14px 22px; }
-  .cs { grid-template-columns: 1fr; gap: 16px; align-items: start; }
+  /* Colour Story on phones: photo height follows the screen height so the
+     photo, text, button and counter always fit between the nav and the HUD */
+  .cstory { --csh: clamp(200px, calc(100vh - 410px), 52vh); }
+  @supports (height: 100svh) { .cstory { --csh: clamp(200px, calc(100svh - 410px), 52svh); } }
+  .cstory__sticky { align-items: flex-start; }
+  .cstory__track { padding-top: 156px; gap: 36px; }
+  .cs { grid-template-columns: 1fr; gap: 14px; align-items: start; width: min(80vw, 320px); }
   .cs__side { display: contents; }
-  .cs__front { height: 48vh; height: 48svh; }
-  .cs__detail { position: absolute; right: -18px; top: 26%; height: 19vh; height: 19svh; border: 4px solid rgba(255,255,255,.12); }
-  .cs__text { width: calc(48svh * .6 + 10px); max-width: 78vw; }
-  .cs__name { font-size: 46px; margin: 4px 0 6px; }
-  .cs__meta { margin-top: 10px; }
-  .cs .btn { display: none; }
-  .cs__num { font-size: 110px; }
-  .cstory__hud { bottom: 20px; }
+  .cs__front { height: var(--csh); }
+  .cs__detail { position: absolute; left: min(calc(var(--csh) * .6 - 34px), calc(100% - var(--csh) * .294 + 8px)); top: calc(var(--csh) * .3); height: calc(var(--csh) * .42); border: 3px solid rgba(255,255,255,.14); border-radius: 12px; }
+  .cs__text { width: 100%; }
+  .cs__look { display: block; font-size: 9.5px; letter-spacing: .2em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cs__name { font-size: clamp(38px, 11vw, 46px); margin: 2px 0 4px; }
+  .cs__tag { font-size: 13px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .cs__meta { margin-top: 8px; }
+  .cs .btn { margin-top: 12px; padding: 11px 20px; font-size: 10.5px; min-height: 42px; }
+  .cs__num { font-size: 96px; left: -.08em; top: -.62em; }
+  .cstory__hud { bottom: calc(16px + env(safe-area-inset-bottom)); gap: 16px; }
+  .cstory__hint { display: none; }
   .reel { flex-basis: 64vw; }
   .reel figcaption strong { font-size: 19px; }
   .story__mark { width: 74px; height: 74px; font-size: 48px; left: 70%; }
@@ -831,6 +840,21 @@ body:has(.mmenu.is-open) .nav__glass { color: var(--ivory); }
   .newsletter__form input { padding: 14px 16px; }
   .modal { padding: 0; align-items: end; }
   .modal__panel { border-radius: 26px 26px 0 0; max-height: 92vh; }
+}
+
+/* phones held sideways: the section is only ~400px tall */
+@media (max-height: 520px) and (orientation: landscape) {
+  .cstory__intro { display: none; }
+  .cstory__sticky { align-items: flex-start; }
+  .cstory__track { padding-top: 76px; gap: 40px; }
+  .cs { grid-template-columns: auto auto; align-items: end; }
+  .cs__side { display: grid; gap: 10px; width: 240px; }
+  .cs__front { height: calc(100vh - 140px); }
+  .cs__detail { display: none; }
+  .cs__name { font-size: 40px; }
+  .cs .btn { margin-top: 10px; padding: 11px 20px; }
+  .cs__num { font-size: 90px; }
+  .cstory__hud { bottom: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

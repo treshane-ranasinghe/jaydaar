@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout — Jaydaar</title>
+  <link rel="icon" type="image/png" href="/assets/brand/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body class="co-body">
+  <header class="co-top">
+    <a href="/" class="co-back">← <span>Continue shopping</span></a>
+    <a href="/" class="co-logo" aria-label="Jaydaar home"><span class="logo"><span class="logo__name">Jaydaar</span><span class="logo__tag">A style that is timeless</span></span></a>
+    <span class="co-secure">🔒 <span>Secure checkout</span></span>
+  </header>
+
+  <main class="co-wrap">
+    <h1 class="co-title">Checkout</h1>
+
+    <div class="co-alert" id="coAlert" role="alert" hidden></div>
+
+    <section class="co-empty" id="coEmpty" hidden>
+      <h2>Your bag is empty</h2>
+      <p>Add a few pieces you love, then come back to check out.</p>
+      <a href="/#shop" class="btn btn--dark"><span>Shop the collection</span></a>
+    </section>
+
+    <!-- Mobile: collapsible summary -->
+    <button class="co-summary-toggle" id="summaryToggle" type="button" aria-expanded="false" hidden>
+      <span>Show order summary</span><strong id="toggleTotal"></strong>
+    </button>
+
+    <div class="co-grid" id="coGrid" hidden>
+      <form class="co-form" id="coForm" novalidate>
+        <section class="co-section">
+          <h2><span>01</span> Contact</h2>
+          <div class="co-fields">
+            <label class="co-field co-field--full">Full name
+              <input name="name" autocomplete="name" required maxlength="80" />
+              <small class="co-err" data-for="name"></small>
+            </label>
+            <label class="co-field">Phone number
+              <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07X XXX XXXX" required maxlength="20" />
+              <small class="co-err" data-for="phone"></small>
+            </label>
+            <label class="co-field"><span>Email <em>(optional)</em></span>
+              <input name="email" type="email" autocomplete="email" maxlength="120" />
+              <small class="co-err" data-for="email"></small>
+            </label>
+          </div>
+        </section>
+
+        <section class="co-section">
+          <h2><span>02</span> Delivery</h2>
+          <div class="co-fields">
+            <label class="co-field co-field--full">Address
+              <textarea name="address" rows="2" autocomplete="street-address" required maxlength="300" placeholder="House no., street, area"></textarea>
+              <small class="co-err" data-for="address"></small>
+            </label>
+            <label class="co-field">City
+              <input name="city" autocomplete="address-level2" required maxlength="60" />
+              <small class="co-err" data-for="city"></small>
+            </label>
+            <label class="co-field">District
+              <select name="district" required><option value="">Choose district</option></select>
+              <small class="co-err" data-for="district"></small>
+            </label>
+            <label class="co-field co-field--full"><span>Order notes <em>(optional)</em></span>
+              <textarea name="notes" rows="2" maxlength="500" placeholder="Landmarks, delivery times, anything we should know"></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="co-section">
+          <h2><span>03</span> Payment</h2>
+          <div class="co-pay" role="radiogroup" aria-label="Payment method">
+            <label class="co-pay__opt">
+              <input type="radio" name="paymentMethod" value="cod" />
+              <span class="co-pay__card">
+                <span class="co-pay__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg>
+                </span>
+                <span class="co-pay__text"><strong>Cash on Delivery</strong><span>Pay in cash when your order arrives at your door.</span></span>
+                <span class="co-pay__check" aria-hidden="true"></span>
+              </span>
+            </label>
+            <label class="co-pay__opt">
+              <input type="radio" name="paymentMethod" value="bank" />
+              <span class="co-pay__card">
+                <span class="co-pay__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 10v7M9.5 10v7M14.5 10v7M19 10v7"/><path d="M3 20h18"/></svg>
+                </span>
+                <span class="co-pay__text"><strong>Bank Transfer</strong><span>Transfer to our account, then upload your payment slip.</span></span>
+                <span class="co-pay__check" aria-hidden="true"></span>
+              </span>
+            </label>
+          </div>
+          <small class="co-err" data-for="paymentMethod"></small>
+
+          <div class="co-panel" id="codPanel" hidden>
+            <p>Please keep <strong class="js-total"></strong> ready in cash. We’ll call you to confirm your order before it ships.</p>
+          </div>
+          <div class="co-panel" id="bankPanel" hidden>
+            <p>After placing your order, transfer <strong class="js-total"></strong> to:</p>
+            <dl class="co-bank" id="bankDetails"></dl>
+            <p class="co-hint">Use your <strong>order number</strong> as the payment reference. You can upload your slip on the next page — we confirm your order as soon as the payment is verified.</p>
+          </div>
+        </section>
+
+        <button class="btn btn--dark btn--block co-submit co-submit--mobile" type="submit"><span>Place order</span></button>
+      </form>
+
+      <aside class="co-summary" id="coSummary">
+        <h2>Order summary</h2>
+        <ul class="co-items" id="coItems"></ul>
+        <dl class="co-totals">
+          <dt>Subtotal</dt><dd id="sumSubtotal"></dd>
+          <dt>Delivery</dt><dd id="sumDelivery"></dd>
+          <dt class="co-total">Total</dt><dd class="co-total" id="sumTotal"></dd>
+        </dl>
+        <p class="co-free" id="freeNote"></p>
+        <button class="btn btn--dark btn--block co-submit co-submit--desktop" type="submit" form="coForm"><span>Place order</span></button>
+        <p class="co-small">By placing your order you agree to be contacted about delivery.</p>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

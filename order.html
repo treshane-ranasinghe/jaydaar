@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your order — Jaydaar</title>
+  <link rel="icon" type="image/png" href="/assets/brand/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body class="co-body">
+  <header class="co-top">
+    <a href="/" class="co-back">← <span>Back to store</span></a>
+    <a href="/" class="co-logo" aria-label="Jaydaar home"><span class="logo"><span class="logo__name">Jaydaar</span><span class="logo__tag">A style that is timeless</span></span></a>
+    <a class="co-secure" id="helpLink" href="https://wa.me/94725490944" target="_blank" rel="noopener">Need help?</a>
+  </header>
+
+  <main class="co-wrap co-wrap--order">
+    <div class="od-loading" id="odLoading">Loading your order…</div>
+    <div class="co-alert" id="odAlert" role="alert" hidden></div>
+
+    <div id="odContent" hidden>
+      <section class="od-hero">
+        <div class="od-check" aria-hidden="true"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
+        <p class="eyebrow"><span class="line"></span> <span id="odNumber"></span></p>
+        <h1 id="odTitle"></h1>
+        <p class="od-lead" id="odLead"></p>
+      </section>
+
+      <ol class="od-steps" id="odSteps"></ol>
+
+      <div class="od-grid">
+        <div class="od-col">
+          <section class="od-card" id="odPayment"></section>
+          <section class="od-card">
+            <h2>Updates</h2>
+            <ul class="od-timeline" id="odTimeline"></ul>
+          </section>
+        </div>
+        <div class="od-col">
+          <section class="od-card">
+            <h2>Your order</h2>
+            <ul class="co-items" id="odItems"></ul>
+            <dl class="co-totals">
+              <dt>Subtotal</dt><dd id="odSubtotal"></dd>
+              <dt>Delivery</dt><dd id="odDelivery"></dd>
+              <dt class="co-total">Total</dt><dd class="co-total" id="odTotal"></dd>
+            </dl>
+          </section>
+          <section class="od-card">
+            <h2>Delivering to</h2>
+            <p class="od-address" id="odAddress"></p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>

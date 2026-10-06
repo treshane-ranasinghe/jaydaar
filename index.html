@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaydaar — A Style That Is Timeless</title>
+  <meta name="description" content="Jaydaar — handcrafted Sri Lankan batik. Hand-waxed sarees, kurta sets, co-ords, dresses and sarongs made to be timeless." />
+  <meta name="theme-color" content="#f6f2ec" />
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/fx.css" />
+</head>
+<body class="is-loading">
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pl__sky"><i></i><i></i><i></i></div>
+    <div class="pl__frame"><span>Jaydaar</span><span>Batik Collection Nº 01</span></div>
+    <div class="pl__logo"><span class="logo"><span class="logo__name">Jaydaar</span><span class="logo__tag">A style that is timeless</span></span></div>
+    <div class="pl__foot">
+      <span class="pl__label">Drawn in wax</span>
+      <span class="pl__count"><span id="loadCount">0</span><sup>%</sup></span>
+    </div>
+    <div class="pl__line"><i id="loadLine"></i></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label"></span></div></div>
+
+  <div class="scroll-progress" aria-hidden="true"><i id="scrollProgress"></i></div>
+
+  <!-- Announcement -->
+  <div class="announce">
+    <div class="announce__track">
+      <span>Complimentary delivery on orders over Rs 15,000</span><span>✦</span>
+      <span>Handcrafted Sri Lankan batik</span><span>✦</span>
+      <span>Sarees · Sets · Co-ords · Dresses</span><span>✦</span>
+      <span>Complimentary delivery on orders over Rs 15,000</span><span>✦</span>
+      <span>Handcrafted Sri Lankan batik</span><span>✦</span>
+      <span>Sarees · Sets · Co-ords · Dresses</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__glass">
+      <button class="nav__burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+      <nav class="nav__links nav__links--left">
+        <a href="#shop" data-hover>Shop</a>
+        <a href="#collections" data-hover>Collections</a>
+        <a href="#colour-story" data-hover>Colour Story</a>
+      </nav>
+      <a href="#top" class="nav__logo" data-hover aria-label="Jaydaar home"><span class="logo"><span class="logo__name">Jaydaar</span><span class="logo__tag">A style that is timeless</span></span></a>
+      <nav class="nav__links nav__links--right">
+        <a href="#atelier" data-hover>Atelier</a>
+        <button class="nav__icon" id="searchBtn" aria-label="Search" data-hover>
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="nav__icon" id="wishBtn" aria-label="Wishlist" data-hover>
+          <svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.3C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.7-1.8 4.7-9.3 9.3-9.3 9.3Z"/></svg>
+          <span class="nav__badge" id="wishCount">0</span>
+        </button>
+        <button class="nav__icon nav__cart" id="cartBtn" aria-label="Open bag" data-hover>
+          <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="nav__badge" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mmenu" id="mmenu">
+    <div class="mmenu__sky" aria-hidden="true"></div>
+    <nav>
+      <a href="#shop"><span>01</span>Shop</a>
+      <a href="#collections"><span>02</span>Collections</a>
+      <a href="#colour-story"><span>03</span>Colour Story</a>
+      <a href="#atelier"><span>04</span>Atelier</a>
+    </nav>
+    <p>A style that is timeless · Nº 01</p>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO: the sky takes the colour of each look -->
+    <section class="hero" id="hero">
+      <div class="hero__sky" aria-hidden="true"><i class="hero__glow hero__glow--1"></i><i class="hero__glow hero__glow--2"></i><i class="hero__glow hero__glow--3"></i></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__wordmark" aria-hidden="true"><span>Jaydaar</span></div>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow"><span class="line"></span> Batik Collection Nº 01</p>
+          <h1 class="hero__title">
+            <span class="row"><span class="word" data-split>Timeless,</span></span>
+            <span class="row"><span class="word" data-split>by</span> <em class="word word--accent" data-split>hand.</em></span>
+          </h1>
+          <p class="hero__lead">Hand-waxed, hand-dyed Sri Lankan batik — sarees, sets and dresses made to be worn for years, not seasons. Ten pieces in our first collection.</p>
+          <div class="hero__ctas">
+            <a href="#shop" class="btn btn--dark magnetic" data-hover><span>Shop the Collection</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#motion" class="btn btn--ghost magnetic" data-hover><span>Watch in Motion</span></a>
+          </div>
+          <div class="hero__now" id="heroNow" data-hover>
+            <span class="hero__now-num"><b id="heroNum">01</b> / <span id="heroTotal">10</span></span>
+            <span class="hero__now-text"><small id="heroTone">Now showing</small><strong id="heroName">Ranwan Wave Batik Saree</strong></span>
+            <span class="hero__now-price" id="heroPrice"></span>
+          </div>
+        </div>
+
+        <div class="hero__stage" id="heroStage">
+          <div class="hero__halo" aria-hidden="true"></div>
+          <div class="hero__frame" id="heroFrame" data-cursor="View"></div>
+          <button class="hero__next" id="heroNext" aria-label="Next look" data-hover>
+            <span class="hero__next-img" id="heroNextImg"></span>
+            <span class="hero__next-label"><span>Next look</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </button>
+          <div class="hero__badge" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+              <text><textPath href="#circle">Jaydaar ✦ A style that is timeless ✦ </textPath></text>
+            </svg>
+            <span class="mono">J</span>
+          </div>
+        </div>
+
+        <ol class="hero__index" id="heroIndex" aria-label="Looks"></ol>
+      </div>
+
+      <a href="#marquee" class="hero__scroll" data-hover><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Hand-Waxed Batik</span><em>✦</em><span class="outline">Sarees</span><em>✦</em><span>Kurta Sets</span><em>✦</em><span class="outline">Co-ords</span><em>✦</em>
+        <span>Hand-Waxed Batik</span><em>✦</em><span class="outline">Sarees</span><em>✦</em><span>Kurta Sets</span><em>✦</em><span class="outline">Co-ords</span><em>✦</em>
+      </div>
+    </section>
+
+    <!-- Manifesto (words light up on scroll) -->
+    <section class="manifesto" id="manifesto">
+      <p class="eyebrow"><span class="line"></span> The Jaydaar Way</p>
+      <p class="manifesto__text" id="manifestoText">Batik is patience made visible <span class="pill"><img src="assets/images/ranwan-wave-saree-2.jpg" alt="" /></span> — wax drawn by hand, colour laid down layer by layer, and a fine crackle that makes every piece one of a kind. We dye in bold, joyful colour <span class="pill"><img src="assets/images/kaha-hearts-saree-1.jpg" alt="" /></span>, cut for ease and real life, and finish every saree and set to be worn for years <span class="pill"><img src="assets/images/nila-saree-1.jpg" alt="" /></span>. A style that is <em>timeless.</em></p>
+    </section>
+
+    <!-- Collections -->
+    <section class="silhouettes" id="collections">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <p class="eyebrow"><span class="line"></span> Three Collections</p>
+          <h2>Rooted in <em>craft,</em> made to <em>last.</em></h2>
+        </div>
+        <p class="section-head__aside">Every piece begins as plain cotton and a pot of hot wax — then colour, crackle and a silhouette that lets the batik speak.</p>
+      </div>
+      <div class="sil__grid">
+        <a href="#shop" class="sil reveal" data-filter-link="saree" data-hover data-cursor="Explore">
+          <div class="sil__img">
+            <img src="assets/images/ranwan-wave-saree-1.jpg" alt="Ranwan Wave Batik Saree" loading="lazy" />
+            <img class="sil__alt" src="assets/images/kaha-hearts-saree-1.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="sil__info"><span>01</span><h3>Sarees</h3><p>Hand-waxed pallus · soft cotton drapes</p></div>
+        </a>
+        <a href="#shop" class="sil sil--raised reveal" data-filter-link="sets" data-hover data-cursor="Explore">
+          <div class="sil__img">
+            <img src="assets/images/vana-kurta-set-1.jpg" alt="Vana Leaf Kurta Set" loading="lazy" />
+            <img class="sil__alt" src="assets/images/kola-leaf-coord-1.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="sil__info"><span>02</span><h3>Sets &amp; Co-ords</h3><p>Kurta sets · co-ords · drape skirts</p></div>
+        </a>
+        <a href="#shop" class="sil reveal" data-filter-link="dresses" data-hover data-cursor="Explore">
+          <div class="sil__img">
+            <img src="assets/images/ira-sunset-mini-1.jpg" alt="Ira Sunset Mini Dress" loading="lazy" />
+            <img class="sil__alt" src="assets/images/ira-sunset-mini-3.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="sil__info"><span>03</span><h3>Dresses</h3><p>Fire-toned batik · made for evenings</p></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="shop" id="shop">
+      <div class="shop__head">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="line"></span> The Collection</p>
+          <h2>Ten pieces, <em>one craft.</em></h2>
+        </div>
+        <div class="filters reveal" id="filters">
+          <button class="filter is-active" data-filter="all" data-hover>All</button>
+          <button class="filter" data-filter="saree" data-hover>Sarees</button>
+          <button class="filter" data-filter="sets" data-hover>Sets &amp; Co-ords</button>
+          <button class="filter" data-filter="dresses" data-hover>Dresses</button>
+          <button class="filter" data-filter="men" data-hover>Men</button>
+          <span class="filter__pill" id="filterPill"></span>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <!-- Colour Story (horizontal scroll, the room takes each piece's colour) -->
+    <section class="cstory" id="colour-story">
+      <div class="cstory__sticky">
+        <div class="cstory__glow" aria-hidden="true"></div>
+        <div class="cstory__intro">
+          <p class="eyebrow"><span class="line"></span> The Colour Story</p>
+          <h2>Ten <em>colours,</em> <br/>one craft.</h2>
+          <p>Scroll through the collection and let the room take on the colour of each piece.</p>
+        </div>
+        <div class="cstory__track" id="csTrack"></div>
+        <div class="cstory__hud">
+          <span class="cstory__count"><b id="csNum">01</b> / <span id="csTotal">10</span></span>
+          <div class="cstory__progress"><i id="csProgress"></i></div>
+          <span class="cstory__hint">Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- In Motion: video reels -->
+    <section class="motion" id="motion">
+      <div class="section-head section-head--center reveal">
+        <p class="eyebrow"><span class="line"></span> In Motion <span class="line"></span></p>
+        <h2>Batik that <em>moves.</em></h2>
+      </div>
+      <div class="reels">
+        <figure class="reel reveal" data-product="vana-kurta-set" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-vana-kurta-set.mp4" poster="assets/videos/reel-vana-kurta-set.jpg" muted loop playsinline preload="none" aria-label="Vana Leaf Kurta Set in motion"></video></div>
+          <figcaption><span>01</span><strong>Vana Leaf Kurta Set</strong><p>Emerald fern kurta</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="rathu-mal-saree" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-rathu-mal-saree.mp4" poster="assets/videos/reel-rathu-mal-saree.jpg" muted loop playsinline preload="none" aria-label="Rathu Mal Batik Saree in motion"></video></div>
+          <figcaption><span>02</span><strong>Rathu Mal Batik Saree</strong><p>White daisies on scarlet</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="nila-saree" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-nila-saree.mp4" poster="assets/videos/reel-nila-saree.jpg" muted loop playsinline preload="none" aria-label="Nila Batik Saree in motion"></video></div>
+          <figcaption><span>03</span><strong>Nila Batik Saree</strong><p>White blooms on sky blue</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="nelum-puff-sleeve-saree" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-nelum-puff-sleeve-saree.mp4" poster="assets/videos/reel-nelum-puff-sleeve-saree.jpg" muted loop playsinline preload="none" aria-label="Nelum Puff-Sleeve Saree in motion"></video></div>
+          <figcaption><span>04</span><strong>Nelum Puff-Sleeve Saree</strong><p>Lotus batik, puffed sleeves</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="kola-leaf-coord" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-kola-leaf-coord.mp4" poster="assets/videos/reel-kola-leaf-coord.jpg" muted loop playsinline preload="none" aria-label="Kola Leaf Co-ord in motion"></video></div>
+          <figcaption><span>05</span><strong>Kola Leaf Co-ord</strong><p>Sage leaf top &amp; trousers</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Atelier -->
+    <section class="story" id="atelier">
+      <div class="story__media reveal">
+        <div class="story__img story__img--main"><img src="assets/images/kalu-drape-set-2.jpg" alt="Kalu Batik Drape Set" loading="lazy" /></div>
+        <div class="story__img story__img--small"><img src="assets/images/kaha-hearts-saree-2.jpg" alt="" loading="lazy" /></div>
+        <span class="story__mark mono" aria-hidden="true">J</span>
+      </div>
+      <div class="story__text">
+        <p class="eyebrow reveal"><span class="line"></span> The Atelier</p>
+        <h2 class="reveal">Drawn in wax.<br/><em>Made to last.</em></h2>
+        <p class="reveal">Jaydaar began with a love for Sri Lankan batik — the slow, careful craft of drawing in hot wax, dyeing, cracking and dyeing again until a pattern appears that no machine could repeat. We bring that craft into sarees, sets and dresses you'll reach for again and again: bold in colour, easy to wear, and made to stay in your wardrobe for years.</p>
+        <ul class="story__list">
+          <li class="reveal"><span>01</span><div><strong>Hand-waxed batik</strong><p>Every motif is drawn by hand in wax, so no two pieces are ever quite alike.</p></div></li>
+          <li class="reveal"><span>02</span><div><strong>Breathable cotton</strong><p>Soft cottons that stay cool through the heat of the day and drape beautifully.</p></div></li>
+          <li class="reveal"><span>03</span><div><strong>Considered fit</strong><p>Free-size sarees and sarongs, and sets and dresses in sizes XS to XL.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="newsletter__card reveal">
+        <div class="newsletter__sky" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="newsletter__mark mono" aria-hidden="true">J</span>
+        <p class="eyebrow"><span class="line"></span> Join the Jaydaar Circle</p>
+        <h2>Receive <em>10% off</em> your first order</h2>
+        <p>First look at new collections, private previews and stories from the atelier.</p>
+        <form class="newsletter__form" id="newsForm">
+          <input type="email" placeholder="Your email address" required aria-label="Email" />
+          <button type="submit" class="btn btn--light magnetic" data-hover><span>Join</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__lockup"><span class="logo"><span class="logo__name">Jaydaar</span><span class="logo__tag">A style that is timeless</span></span></div>
+    <div class="footer__big">Jaydaar</div>
+    <div class="footer__grid">
+      <div><h4>Shop</h4><a href="#shop">The Collection</a><a href="#shop" data-filter-link="saree">Sarees</a><a href="#shop" data-filter-link="sets">Sets &amp; Co-ords</a><a href="#shop" data-filter-link="dresses">Dresses</a><a href="#shop" data-filter-link="men">Men</a></div>
+      <div><h4>Help</h4><a href="https://wa.me/94725490944" target="_blank" rel="noopener">WhatsApp 0725 490 944</a><a href="#">Delivery</a><a href="#">Size Guide</a><a href="#">Contact</a></div>
+      <div><h4>About</h4><a href="#atelier">The Atelier</a><a href="#colour-story">Colour Story</a><a href="#motion">In Motion</a></div>
+      <div><h4>Follow</h4><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">TikTok</a></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 Jaydaar</span><span>A style that is timeless</span></div>
+  </footer>
+
+  <!-- Bag drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Shopping bag">
+    <div class="cart__head">
+      <h3>Your Bag <span id="cartHeadCount">(0)</span></h3>
+      <button class="cart__close" id="cartClose" aria-label="Close bag" data-hover>
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart__ship">
+      <p id="shipText">You're Rs 15,000 away from complimentary delivery</p>
+      <div class="cart__ship-bar"><i id="shipBar"></i></div>
+    </div>
+    <div class="cart__items" id="cartItems" data-lenis-prevent></div>
+    <div class="cart__empty" id="cartEmpty">
+      <span class="mono" aria-hidden="true">J</span>
+      <h4>Your bag is empty</h4>
+      <p>Discover batik made to be timeless.</p>
+      <a href="#shop" class="btn btn--dark" id="emptyShop" data-hover><span>Start Shopping</span></a>
+    </div>
+    <div class="cart__foot" id="cartFoot">
+      <div class="cart__row"><span>Subtotal</span><strong id="cartSubtotal">Rs 0</strong></div>
+      <div class="cart__row cart__row--muted"><span>Delivery</span><span id="cartShipping">Calculated at checkout</span></div>
+      <button class="btn btn--dark btn--block" id="checkoutBtn" data-hover><span>Checkout</span>
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="cart__secure">Cash on Delivery · Bank Transfer</p>
+    </div>
+  </aside>
+
+  <!-- Quick view modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="mName" data-lenis-prevent>
+      <button class="modal__close" data-close aria-label="Close" data-hover><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <div class="modal__gallery">
+        <div class="modal__glow" aria-hidden="true"></div>
+        <img id="mImg" alt="" />
+        <div class="modal__thumbs" id="mThumbs"></div>
+      </div>
+      <div class="modal__info">
+        <p class="eyebrow" id="mCat"></p>
+        <h3 id="mName"></h3>
+        <p class="modal__tagline" id="mTagline"></p>
+        <div class="modal__price" id="mPrice"></div>
+        <p class="modal__desc" id="mDesc"></p>
+        <div class="opt"><span class="opt__label">Colour — <b id="mColorName"></b></span><div class="swatches" id="mColors"></div></div>
+        <div class="opt"><span class="opt__label">Size <a href="#" class="opt__guide">Size guide</a></span><div class="sizes" id="mSizes"></div></div>
+        <div class="modal__actions">
+          <div class="qty"><button id="mMinus" aria-label="Decrease">−</button><span id="mQty">1</span><button id="mPlus" aria-label="Increase">+</button></div>
+          <button class="btn btn--dark btn--block" id="mAdd" data-hover><span>Add to Bag</span></button>
+        </div>
+        <ul class="modal__perks">
+          <li>✦ Complimentary delivery over Rs 15,000</li>
+          <li>✦ Hand-waxed batik — every piece is unique</li>
+          <li>✦ Questions? WhatsApp 0725 490 944</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"><img id="toastImg" alt="" /><div><strong id="toastTitle">Added to bag</strong><span id="toastText"></span></div></div>
+
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/hero-gl.js"></script>
+</body>
+</html>

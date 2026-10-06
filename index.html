@@ -51,7 +51,7 @@
       <button class="nav__burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
       <nav class="nav__links nav__links--left">
         <a href="#shop" data-hover>Shop</a>
-        <a href="#collections" data-hover>Collections</a>
+        <a href="#motion" data-hover>In Motion</a>
         <a href="#colour-story" data-hover>Colour Story</a>
       </nav>
       <a href="#top" class="nav__logo" data-hover aria-label="Jaydaar home"><span class="logo"><span class="logo__name">Jaydaar</span><span class="logo__tag">A style that is timeless</span></span></a>
@@ -77,7 +77,7 @@
     <div class="mmenu__sky" aria-hidden="true"></div>
     <nav>
       <a href="#shop"><span>01</span>Shop</a>
-      <a href="#collections"><span>02</span>Collections</a>
+      <a href="#motion"><span>02</span>In Motion</a>
       <a href="#colour-story"><span>03</span>Colour Story</a>
       <a href="#atelier"><span>04</span>Atelier</a>
     </nav>
@@ -148,37 +148,33 @@
       <p class="manifesto__text" id="manifestoText">Batik is patience made visible <span class="pill"><img src="assets/images/ranwan-wave-saree-2.jpg" alt="" /></span> — wax drawn by hand, colour laid down layer by layer, and a fine crackle that makes every piece one of a kind. We dye in bold, joyful colour <span class="pill"><img src="assets/images/kaha-hearts-saree-1.jpg" alt="" /></span>, cut for ease and real life, and finish every saree and set to be worn for years <span class="pill"><img src="assets/images/nila-saree-1.jpg" alt="" /></span>. A style that is <em>timeless.</em></p>
     </section>
 
-    <!-- Collections -->
-    <section class="silhouettes" id="collections">
-      <div class="section-head section-head--split reveal">
-        <div>
-          <p class="eyebrow"><span class="line"></span> Three Collections</p>
-          <h2>Rooted in <em>craft,</em> made to <em>last.</em></h2>
-        </div>
-        <p class="section-head__aside">Every piece begins as plain cotton and a pot of hot wax — then colour, crackle and a silhouette that lets the batik speak.</p>
+    <!-- In Motion: video reels -->
+    <section class="motion" id="motion">
+      <div class="section-head section-head--center reveal">
+        <p class="eyebrow"><span class="line"></span> In Motion <span class="line"></span></p>
+        <h2>Batik that <em>moves.</em></h2>
       </div>
-      <div class="sil__grid">
-        <a href="#shop" class="sil reveal" data-filter-link="saree" data-hover data-cursor="Explore">
-          <div class="sil__img">
-            <img src="assets/images/ranwan-wave-saree-1.jpg" alt="Ranwan Wave Batik Saree" loading="lazy" />
-            <img class="sil__alt" src="assets/images/kaha-hearts-saree-1.jpg" alt="" loading="lazy" />
-          </div>
-          <div class="sil__info"><span>01</span><h3>Sarees</h3><p>Hand-waxed pallus · soft cotton drapes</p></div>
-        </a>
-        <a href="#shop" class="sil sil--raised reveal" data-filter-link="sets" data-hover data-cursor="Explore">
-          <div class="sil__img">
-            <img src="assets/images/vana-kurta-set-1.jpg" alt="Vana Leaf Kurta Set" loading="lazy" />
-            <img class="sil__alt" src="assets/images/kola-leaf-coord-1.jpg" alt="" loading="lazy" />
-          </div>
-          <div class="sil__info"><span>02</span><h3>Sets &amp; Co-ords</h3><p>Kurta sets · co-ords · drape skirts</p></div>
-        </a>
-        <a href="#shop" class="sil reveal" data-filter-link="dresses" data-hover data-cursor="Explore">
-          <div class="sil__img">
-            <img src="assets/images/ira-sunset-mini-1.jpg" alt="Ira Sunset Mini Dress" loading="lazy" />
-            <img class="sil__alt" src="assets/images/ira-sunset-mini-3.jpg" alt="" loading="lazy" />
-          </div>
-          <div class="sil__info"><span>03</span><h3>Dresses</h3><p>Fire-toned batik · made for evenings</p></div>
-        </a>
+      <div class="reels">
+        <figure class="reel reveal" data-product="vana-kurta-set" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-vana-kurta-set.mp4" poster="assets/videos/reel-vana-kurta-set.jpg" muted loop playsinline preload="none" aria-label="Vana Leaf Kurta Set in motion"></video></div>
+          <figcaption><span>01</span><strong>Vana Leaf Kurta Set</strong><p>Emerald fern kurta</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="rathu-mal-saree" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-rathu-mal-saree.mp4" poster="assets/videos/reel-rathu-mal-saree.jpg" muted loop playsinline preload="none" aria-label="Rathu Mal Batik Saree in motion"></video></div>
+          <figcaption><span>02</span><strong>Rathu Mal Batik Saree</strong><p>White daisies on scarlet</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="nila-saree" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-nila-saree.mp4" poster="assets/videos/reel-nila-saree.jpg" muted loop playsinline preload="none" aria-label="Nila Batik Saree in motion"></video></div>
+          <figcaption><span>03</span><strong>Nila Batik Saree</strong><p>White blooms on sky blue</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="nelum-puff-sleeve-saree" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-nelum-puff-sleeve-saree.mp4" poster="assets/videos/reel-nelum-puff-sleeve-saree.jpg" muted loop playsinline preload="none" aria-label="Nelum Puff-Sleeve Saree in motion"></video></div>
+          <figcaption><span>04</span><strong>Nelum Puff-Sleeve Saree</strong><p>Lotus batik, puffed sleeves</p></figcaption>
+        </figure>
+        <figure class="reel reveal" data-product="kola-leaf-coord" data-cursor="Shop">
+          <div class="reel__media"><video src="assets/videos/reel-kola-leaf-coord.mp4" poster="assets/videos/reel-kola-leaf-coord.jpg" muted loop playsinline preload="none" aria-label="Kola Leaf Co-ord in motion"></video></div>
+          <figcaption><span>05</span><strong>Kola Leaf Co-ord</strong><p>Sage leaf top &amp; trousers</p></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -216,36 +212,6 @@
           <div class="cstory__progress"><i id="csProgress"></i></div>
           <span class="cstory__hint">Scroll</span>
         </div>
-      </div>
-    </section>
-
-    <!-- In Motion: video reels -->
-    <section class="motion" id="motion">
-      <div class="section-head section-head--center reveal">
-        <p class="eyebrow"><span class="line"></span> In Motion <span class="line"></span></p>
-        <h2>Batik that <em>moves.</em></h2>
-      </div>
-      <div class="reels">
-        <figure class="reel reveal" data-product="vana-kurta-set" data-cursor="Shop">
-          <div class="reel__media"><video src="assets/videos/reel-vana-kurta-set.mp4" poster="assets/videos/reel-vana-kurta-set.jpg" muted loop playsinline preload="none" aria-label="Vana Leaf Kurta Set in motion"></video></div>
-          <figcaption><span>01</span><strong>Vana Leaf Kurta Set</strong><p>Emerald fern kurta</p></figcaption>
-        </figure>
-        <figure class="reel reveal" data-product="rathu-mal-saree" data-cursor="Shop">
-          <div class="reel__media"><video src="assets/videos/reel-rathu-mal-saree.mp4" poster="assets/videos/reel-rathu-mal-saree.jpg" muted loop playsinline preload="none" aria-label="Rathu Mal Batik Saree in motion"></video></div>
-          <figcaption><span>02</span><strong>Rathu Mal Batik Saree</strong><p>White daisies on scarlet</p></figcaption>
-        </figure>
-        <figure class="reel reveal" data-product="nila-saree" data-cursor="Shop">
-          <div class="reel__media"><video src="assets/videos/reel-nila-saree.mp4" poster="assets/videos/reel-nila-saree.jpg" muted loop playsinline preload="none" aria-label="Nila Batik Saree in motion"></video></div>
-          <figcaption><span>03</span><strong>Nila Batik Saree</strong><p>White blooms on sky blue</p></figcaption>
-        </figure>
-        <figure class="reel reveal" data-product="nelum-puff-sleeve-saree" data-cursor="Shop">
-          <div class="reel__media"><video src="assets/videos/reel-nelum-puff-sleeve-saree.mp4" poster="assets/videos/reel-nelum-puff-sleeve-saree.jpg" muted loop playsinline preload="none" aria-label="Nelum Puff-Sleeve Saree in motion"></video></div>
-          <figcaption><span>04</span><strong>Nelum Puff-Sleeve Saree</strong><p>Lotus batik, puffed sleeves</p></figcaption>
-        </figure>
-        <figure class="reel reveal" data-product="kola-leaf-coord" data-cursor="Shop">
-          <div class="reel__media"><video src="assets/videos/reel-kola-leaf-coord.mp4" poster="assets/videos/reel-kola-leaf-coord.jpg" muted loop playsinline preload="none" aria-label="Kola Leaf Co-ord in motion"></video></div>
-          <figcaption><span>05</span><strong>Kola Leaf Co-ord</strong><p>Sage leaf top &amp; trousers</p></figcaption>
-        </figure>
       </div>
     </section>
 

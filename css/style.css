@@ -530,7 +530,7 @@ body:has(.mmenu.is-open) .nav__glass { color: var(--ivory); }
 .cstory__progress i { display: block; height: 100%; background: var(--accent-soft); transform-origin: left; transform: scaleX(0); }
 
 /* ---------- In Motion (video reels) ---------- */
-.motion { padding: clamp(90px, 12vw, 170px) var(--gutter); max-width: 1500px; margin: 0 auto; }
+.motion { padding: clamp(40px, 5vw, 72px) var(--gutter) clamp(90px, 12vw, 170px); max-width: 1500px; margin: 0 auto; }
 .reels { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(12px, 1.6vw, 24px); }
 .reel { cursor: pointer; }
 .reel:nth-child(2) { transition-delay: .08s; margin-top: clamp(30px, 4vw, 60px); } .reel:nth-child(3) { transition-delay: .16s; }
